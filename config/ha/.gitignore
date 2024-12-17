@@ -1,0 +1,10 @@
+# Ignore files starting with "home-assistant"
+home-assistant*
+
+# Ignore the .storage, .cloud, and tts folders
+.storage/
+.cloud/
+tts/
+
+# Ignore the .HA_VERSION file
+.HA_VERSION

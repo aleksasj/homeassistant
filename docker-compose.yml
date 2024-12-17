@@ -1,0 +1,49 @@
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: homeassistant
+    volumes:
+      - "./config/ha:/config"
+    ports:
+      - "8123:8123"
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+    restart: always
+
+  mqtt:
+    image: eclipse-mosquitto
+    container_name: mqtt
+    volumes:
+       - "./config/mqtt:/mosquitto/config:rw"
+       - "./data/mqtt:/mosquitto/data:rw"
+       - "./log/mqtt/:/mosquitto/log:rw"
+    ports:
+       - "1883:1883"
+       - "9001:9001"
+    restart: always
+
+  pai:
+    image: paradoxalarminterface/pai:latest
+    container_name: pai
+    volumes:
+        - "./config/pai:/etc/pai:ro"
+        - "./log/pai:/var/log/pai:rw"
+        - "/etc/timezone:/etc/timezone:ro"
+        - "/etc/localtime:/etc/localtime:ro"
+    ports:
+       - "10000:10000"
+    environment:
+        - TZ=EUROPE/Vilnius
+    user: "1000:1000"
+    #    devices:
+    #      - "/dev/tty.YOUR_SERIAL_PORT"
+    restart: always
+
+volumes:
+  config:
+  data:
+  log:
+
+networks:
+  default:
+    name: mqtt5-network
