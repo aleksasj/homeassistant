@@ -39,6 +39,23 @@ services:
     #      - "/dev/tty.YOUR_SERIAL_PORT"
     restart: always
 
+  vlc-mqtt:
+    build:
+      context: ./builds/vlc-mqtt/
+    container_name: vlc-mqtt
+    devices:
+      - "/dev/snd:/dev/snd"
+    environment:
+      MQTT_BROKER: "192.168.0.200"
+      MQTT_PORT: "1883"
+      MQTT_USER: "ha"
+      MQTT_PASSWORD: "nDkH1Waz"
+    volumes:
+      - "./config/vlc-mqtt/sounds:/opt/sounds"
+    networks:
+      - default
+    restart: always
+
 volumes:
   config:
   data:
