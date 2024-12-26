@@ -39,20 +39,15 @@ services:
     #      - "/dev/tty.YOUR_SERIAL_PORT"
     restart: always
 
-  vlc-mqtt:
+  player:
     build:
-      context: ./builds/vlc-mqtt/
-    container_name: vlc-mqtt
+      context: ./builds/player/
+    container_name: player
     devices:
       - "/dev/snd:/dev/snd"
-    environment:
-      MQTT_BROKER: ""
-      MQTT_PORT: "1883"
-      MQTT_USER: ""
-      MQTT_PASSWORD: ""
     privileged: true
     volumes:
-      - "./config/vlc-mqtt/sounds:/opt/sounds"
+      - "./config/player/:/opt/"
     restart: always
 
 volumes:
