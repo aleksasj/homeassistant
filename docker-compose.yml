@@ -43,6 +43,7 @@ services:
     build:
       context: ./builds/player/
     container_name: player
+    env_file: "config/player/.env"
     devices:
       - "/dev/snd:/dev/snd"
     privileged: true

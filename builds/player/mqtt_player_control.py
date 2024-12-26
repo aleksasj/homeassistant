@@ -2,9 +2,6 @@ import os
 import subprocess
 import paho.mqtt.client as mqtt
 import time
-from dotenv import load_dotenv
-
-load_dotenv()
 
 MQTT_HOST = os.getenv("MQTT_HOST", "localhost")
 MQTT_PORT = int(os.getenv("MQTT_PORT", "1883"))
