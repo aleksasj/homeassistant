@@ -39,6 +39,18 @@ services:
     #      - "/dev/tty.YOUR_SERIAL_PORT"
     restart: always
 
+  player:
+    build:
+      context: ./builds/player/
+    container_name: player
+    env_file: "config/player/.env"
+    devices:
+      - "/dev/snd:/dev/snd"
+    privileged: true
+    volumes:
+      - "./config/player/:/opt/"
+    restart: always
+
   cloudflared:
     container_name: cloudflared
     image: cloudflare/cloudflared:latest
