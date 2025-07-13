@@ -20,5 +20,5 @@ l-ha:
 l-pai:
 	docker exec -it pai bash
 
-l-player:
-	docker exec -it player bash
+l-cloudflared:
+	docker exec -it cloudflared bash
