@@ -1,0 +1,8 @@
+tunnel: ha-tunelis
+credentials-file: /etc/cloudflared/ha-tunelis.json
+origincert: /etc/cloudflared/cert.pem
+
+ingress:
+  - hostname: ha.cqb.lt
+    service: http://192.168.0.200:8123
+  - service: http_status:404

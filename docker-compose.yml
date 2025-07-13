@@ -39,16 +39,12 @@ services:
     #      - "/dev/tty.YOUR_SERIAL_PORT"
     restart: always
 
-  player:
-    build:
-      context: ./builds/player/
-    container_name: player
-    env_file: "config/player/.env"
-    devices:
-      - "/dev/snd:/dev/snd"
-    privileged: true
+  cloudflared:
+    container_name: cloudflared
+    image: cloudflare/cloudflared:latest
+    command: tunnel run ha-tunelis
     volumes:
-      - "./config/player/:/opt/"
+      - "./config/cloudflared/:/etc/cloudflared/"
     restart: always
 
 volumes:
