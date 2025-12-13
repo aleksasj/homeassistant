@@ -6,8 +6,6 @@ services:
       - "./config/ha:/config"
     ports:
       - "8123:8123"
-    devices:
-      - /dev/ttyUSB0:/dev/ttyUSB0
     restart: always
 
   mqtt:
@@ -15,49 +13,22 @@ services:
     container_name: mqtt
     volumes:
        - "./config/mqtt:/mosquitto/config:rw"
-       - "./data/mqtt:/mosquitto/data:rw"
-       - "./log/mqtt/:/mosquitto/log:rw"
     ports:
        - "1883:1883"
        - "9001:9001"
     restart: always
 
-  pai:
-    image: paradoxalarminterface/pai:latest
-    container_name: pai
-    volumes:
-        - "./config/pai:/etc/pai:ro"
-        - "./log/pai:/var/log/pai:rw"
-        - "/etc/timezone:/etc/timezone:ro"
-        - "/etc/localtime:/etc/localtime:ro"
-    ports:
-       - "10000:10000"
-    environment:
-        - TZ=EUROPE/Vilnius
-    user: "1000:1000"
-    #    devices:
-    #      - "/dev/tty.YOUR_SERIAL_PORT"
-    restart: always
-
-  player:
-    build:
-      context: ./builds/player/
-    container_name: player
-    env_file: "config/player/.env"
-    devices:
-      - "/dev/snd:/dev/snd"
-    privileged: true
-    volumes:
-      - "./config/player/:/opt/"
-    restart: always
-
-  cloudflared:
-    container_name: cloudflared
-    image: cloudflare/cloudflared:latest
-    command: tunnel run ha-tunelis
-    volumes:
-      - "./config/cloudflared/:/etc/cloudflared/"
-    restart: always
+#  player:
+#    build:
+#      context: ./builds/player/
+#    container_name: player
+#    env_file: "config/player/.env"
+#    devices:
+#      - "/dev/snd:/dev/snd"
+#    privileged: true
+#    volumes:
+#      - "./config/player/:/opt/"
+#    restart: always
 
 volumes:
   config:
