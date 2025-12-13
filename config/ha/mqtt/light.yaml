@@ -1,0 +1,400 @@
+- name: D16-1
+  unique_id: D16-1
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer1":{"value":{{ (brightness / 255 * 99) | int }} 
+    {%- else -%}
+    {"dimmer1":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer1":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer1.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer1.value is defined -%}
+    {{ (value_json.dimmer1.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+    
+- name: D16-2
+  unique_id: D16-2
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer2":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer2":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer2":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer2.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer2.value is defined -%}
+    {{ (value_json.dimmer2.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+    
+- name: D16-3
+  unique_id: D16-3
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer3":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer3":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer3":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer3.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer3.value is defined -%}
+    {{ (value_json.dimmer3.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-4
+  unique_id: D16-4
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer4":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer4":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer4":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer4.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer4.value is defined -%}
+    {{ (value_json.dimmer4.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-5
+  unique_id: D16-5
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer5":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer5":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer5":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer5.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer5.value is defined -%}
+    {{ (value_json.dimmer5.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-6
+  unique_id: D16-6
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer6":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer6":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer6":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer6.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer6.value is defined -%}
+    {{ (value_json.dimmer6.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-7
+  unique_id: D16-7
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer7":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer7":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer7":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer7.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer7.value is defined -%}
+    {{ (value_json.dimmer7.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+
+- name: D16-8
+  unique_id: D16-8
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer8":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer8":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer8":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer8.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer8.value is defined -%}
+    {{ (value_json.dimmer8.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-9
+  unique_id: D16-9
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer9":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer9":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer9":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer9.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer9.value is defined -%}
+    {{ (value_json.dimmer9.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-10
+  unique_id: D16-10
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer10":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer10":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer10":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer10.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer10.value is defined -%}
+    {{ (value_json.dimmer10.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-11
+  unique_id: D16-11
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer11":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer11":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer11":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer11.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer11.value is defined -%}
+    {{ (value_json.dimmer11.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-12
+  unique_id: D16-12
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer12":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer12":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer12":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer12.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer12.value is defined -%}
+    {{ (value_json.dimmer12.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-13
+  unique_id: D16-13
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer13":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer13":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer13":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer13.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer13.value is defined -%}
+    {{ (value_json.dimmer13.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-14
+  unique_id: D16-14
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer14":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer14":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer14":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer14.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer14.value is defined -%}
+    {{ (value_json.dimmer14.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-15
+  unique_id: D16-15
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer15":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer15":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer15":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer15.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer15.value is defined -%}
+    {{ (value_json.dimmer15.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}
+
+- name: D16-16
+  unique_id: D16-16
+  schema: template
+  command_topic: "dimmer/c8ebd1524e1cfd3c071f5396/set"
+  state_topic: "dimmer/c8ebd1524e1cfd3c071f5396/state"
+  command_on_template: >
+    {%- if brightness is defined -%}
+    {"dimmer16":{"value":{{ (brightness / 255 * 99) | int }}}
+    {%- else -%}
+    {"dimmer16":{"value":99}}
+    {%- endif -%}
+  command_off_template: '{"dimmer16":{"value":0}}'
+  state_template: >
+    {%- if value_json.dimmer16.value == 0 -%}
+      off
+    {%- else -%}
+      on
+    {%- endif -%}
+  brightness_template: >
+    {%- if value_json.dimmer16.value is defined -%}
+    {{ (value_json.dimmer16.value / 99 * 255) | int }}
+    {%- else -%}
+    0
+    {%- endif -%}

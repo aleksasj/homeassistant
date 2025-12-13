@@ -1,0 +1,320 @@
+- name: 'H32B-PRO-1'
+  unique_id: H32B-PRO-1
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay1":{"on":1}}'
+  payload_off:  '{"relay1":{"on":0}}'
+  value_template: '{{ value_json.relay1.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-2'
+  unique_id: H32B-PRO-2
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay2":{"on":1}}'
+  payload_off:  '{"relay2":{"on":0}}'
+  value_template: '{{ value_json.relay2.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-3'
+  unique_id: H32B-PRO-3
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay3":{"on":1}}'
+  payload_off:  '{"relay3":{"on":0}}'
+  value_template: '{{ value_json.relay3.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-4'
+  unique_id: H32B-PRO-4
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay4":{"on":1}}'
+  payload_off:  '{"relay4":{"on":0}}'
+  value_template: '{{ value_json.relay4.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-5'
+  unique_id: H32B-PRO-5
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay5":{"on":1}}'
+  payload_off:  '{"relay5":{"on":0}}'
+  value_template: '{{ value_json.relay5.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-6'
+  unique_id: H32B-PRO-6
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay6":{"on":1}}'
+  payload_off:  '{"relay6":{"on":0}}'
+  value_template: '{{ value_json.relay6.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-7'
+  unique_id: H32B-PRO-7
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay7":{"on":1}}'
+  payload_off:  '{"relay7":{"on":0}}'
+  value_template: '{{ value_json.relay7.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-8'
+  unique_id: H32B-PRO-8
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay8":{"on":1}}'
+  payload_off:  '{"relay8":{"on":0}}'
+  value_template: '{{ value_json.relay8.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-9'
+  unique_id: H32B-PRO-9
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay9":{"on":1}}'
+  payload_off:  '{"relay9":{"on":0}}'
+  value_template: '{{ value_json.relay9.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-10'
+  unique_id: H32B-PRO-10
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay10":{"on":1}}'
+  payload_off:  '{"relay10":{"on":0}}'
+  value_template: '{{ value_json.relay10.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-11'
+  unique_id: H32B-PRO-11
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay11":{"on":1}}'
+  payload_off:  '{"relay11":{"on":0}}'
+  value_template: '{{ value_json.relay11.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-12'
+  unique_id: H32B-PRO-12
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay12":{"on":1}}'
+  payload_off:  '{"relay12":{"on":0}}'
+  value_template: '{{ value_json.relay12.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-13'
+  unique_id: H32B-PRO-13
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay13":{"on":1}}'
+  payload_off:  '{"relay13":{"on":0}}'
+  value_template: '{{ value_json.relay13.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-14'
+  unique_id: H32B-PRO-14
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay14":{"on":1}}'
+  payload_off:  '{"relay14":{"on":0}}'
+  value_template: '{{ value_json.relay14.on }}'
+  state_on: 1
+  state_off: 0 
+
+- name: 'H32B-PRO-15'
+  unique_id: H32B-PRO-15
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay15":{"on":1}}'
+  payload_off:  '{"relay15":{"on":0}}'
+  value_template: '{{ value_json.relay15.on }}'
+  state_on: 1
+  state_off: 0
+ 
+- name: 'H32B-PRO-16'
+  unique_id: H32B-PRO-16
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay16":{"on":1}}'
+  payload_off:  '{"relay16":{"on":0}}'
+  value_template: '{{ value_json.relay16.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-17'
+  unique_id: H32B-PRO-17
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay17":{"on":1}}'
+  payload_off:  '{"relay17":{"on":0}}'
+  value_template: '{{ value_json.relay17.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-18'
+  unique_id: H32B-PRO-18
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay18":{"on":1}}'
+  payload_off:  '{"relay18":{"on":0}}'
+  value_template: '{{ value_json.relay18.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-19'
+  unique_id: H32B-PRO-19
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay19":{"on":1}}'
+  payload_off:  '{"relay19":{"on":0}}'
+  value_template: '{{ value_json.relay19.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-20'
+  unique_id: H32B-PRO-20
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay20":{"on":1}}'
+  payload_off:  '{"relay20":{"on":0}}'
+  value_template: '{{ value_json.relay20.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-21'
+  unique_id: H32B-PRO-21
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay21":{"on":1}}'
+  payload_off:  '{"relay21":{"on":0}}'
+  value_template: '{{ value_json.relay21.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-22'
+  unique_id: H32B-PRO-22
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay22":{"on":1}}'
+  payload_off:  '{"relay22":{"on":0}}'
+  value_template: '{{ value_json.relay22.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-23'
+  unique_id: H32B-PRO-23
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay23":{"on":1}}'
+  payload_off:  '{"relay23":{"on":0}}'
+  value_template: '{{ value_json.relay23.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-24'
+  unique_id: H32B-PRO-24
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay24":{"on":1}}'
+  payload_off:  '{"relay24":{"on":0}}'
+  value_template: '{{ value_json.relay24.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-25'
+  unique_id: H32B-PRO-25
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay25":{"on":1}}'
+  payload_off:  '{"relay25":{"on":0}}'
+  value_template: '{{ value_json.relay25.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-26'
+  unique_id: H32B-PRO-26
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay26":{"on":1}}'
+  payload_off:  '{"relay26":{"on":0}}'
+  value_template: '{{ value_json.relay26.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-27'
+  unique_id: H32B-PRO-27
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay27":{"on":1}}'
+  payload_off:  '{"relay27":{"on":0}}'
+  value_template: '{{ value_json.relay27.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-28'
+  unique_id: H32B-PRO-28
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay28":{"on":1}}'
+  payload_off:  '{"relay28":{"on":0}}'
+  value_template: '{{ value_json.relay28.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-29'
+  unique_id: H32B-PRO-29
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay29":{"on":1}}'
+  payload_off:  '{"relay29":{"on":0}}'
+  value_template: '{{ value_json.relay29.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-30'
+  unique_id: H32B-PRO-30
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay30":{"on":1}}'
+  payload_off:  '{"relay30":{"on":0}}'
+  value_template: '{{ value_json.relay30.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-31'
+  unique_id: H32B-PRO-31
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay31":{"on":1}}'
+  payload_off:  '{"relay31":{"on":0}}'
+  value_template: '{{ value_json.relay31.on }}'
+  state_on: 1
+  state_off: 0
+
+- name: 'H32B-PRO-32'
+  unique_id: H32B-PRO-32
+  state_topic: 'relay32/db1982f9f1ea0c0d3413148d/state'
+  command_topic: 'relay32/db1982f9f1ea0c0d3413148d/set'
+  payload_on:  '{"relay32":{"on":1}}'
+  payload_off:  '{"relay32":{"on":0}}'
+  value_template: '{{ value_json.relay32.on }}'
+  state_on: 1
+  state_off: 0
+ 
