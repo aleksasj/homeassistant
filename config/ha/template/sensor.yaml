@@ -1,0 +1,49 @@
+
+      ###############################################
+      # 12543 → Temperature (divide by 10)
+      ###############################################
+      - name: Temperature inside
+        unique_id: "temperature_inside"
+        unit_of_measurement: "°C"
+        state: >
+          {% set v = state_attr('sensor.recuperator_api_raw_data', '12543') %}
+          {% set signed = v if v < 32768 else v - 65536 %}
+          {{ (signed / 10) | round(1) if v is not none else 'unknown' }}
+
+      ###############################################
+      # 12135 → Percentage
+      ###############################################
+      - name: Inbuilt RH
+        unique_id: "inbuild_rh"
+        unit_of_measurement: "%"
+        state: >
+          {% set v = state_attr('sensor.recuperator_api_raw_data', '12135') %}
+          {{ v if v is not none else 'unknown' }}
+
+      ###############################################
+      # 12101 → Temperature (divide by 10)
+      ###############################################
+      - name: Temperature outside
+        unique_id: "temperature_outside"
+        unit_of_measurement: "°C"
+        state: >
+          {% set v = state_attr('sensor.recuperator_api_raw_data', '12101') %}
+          {% set signed = v if v < 32768 else v - 65536 %}
+          {{ (signed / 10) | round(1) if v is not none else 'unknown' }}
+
+      ###############################################
+      # 1160 → Mode mapping
+      ###############################################
+      - name: Mode 1160
+        state: >
+          {% set code = state_attr('sensor.recuperator_api_raw_data', '1160') | int %}
+          {% set modes = {
+            1: 'Auto',
+            2: 'Manual',
+            3: 'Crowded',
+            4: 'Refresh',
+            5: 'Fireplace',
+            6: 'Away',
+            7: 'Holiday'
+          } %}
+          {{ modes.get(code, 'Unknown') }}

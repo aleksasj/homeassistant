@@ -1,0 +1,9 @@
+  recuperator_mode:
+    name: Recuperator Mode
+    options:
+      - AUTO
+      - CROWDED
+      - REFRESH
+      - AWAY
+      - HOLIDAY
+    initial: AUTO

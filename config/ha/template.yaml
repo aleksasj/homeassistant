@@ -1,0 +1,1 @@
+- sensor: !include template/sensor.yaml

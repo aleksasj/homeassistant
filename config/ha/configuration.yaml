@@ -10,5 +10,8 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
+rest_command: !include rest_command.yaml
 mqtt: !include mqtt.yaml
-
+sensor: !include sensor.yaml
+template: !include template.yaml
+input_select: !include input_select.yaml

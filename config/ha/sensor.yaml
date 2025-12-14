@@ -1,0 +1,11 @@
+- platform: rest
+  name: recuperator_api_raw_data
+  resource: http://192.168.0.206/mread?{%2212543%22:1,%2212135%22:1,%2212101%22:1,%221160%22:1}
+  method: GET
+  value_template: "OK"
+  json_attributes:
+    - "12543"
+    - "12135"
+    - "12101"
+    - "1160"
+  scan_interval: 60

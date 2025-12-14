@@ -1,0 +1,9 @@
+set_recuperator_mode:
+  url: >
+    {% set mode = mode | string %}
+    {% if mode == 'AUTO' %}http://192.168.0.206/mwrite?{"1161":1}
+    {% elif mode == 'CROWDED' %}http://192.168.0.206/mwrite?{"1104":4,"1161":3}
+    {% elif mode == 'REFRESH' %}http://192.168.0.206/mwrite?{"1103":1,"1161":4}
+    {% elif mode == 'AWAY' %}http://192.168.0.206/mwrite?{"1101":9,"1161":6}
+    {% elif mode == 'HOLIDAY' %}http://192.168.0.206/mwrite?{"1100":14,"1161":7}
+    {% endif %}
