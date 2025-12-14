@@ -1,1 +1,149 @@
-[]
+- id: '1765706583718'
+  alias: Rekuperatoriaus rėžimas
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - input_select.recuperator_mode
+    to:
+    from:
+  conditions: []
+  actions:
+  - action: rest_command.set_recuperator_mode
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1765707446711'
+  alias: New automation
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - light.d16_2
+    from:
+    - 'off'
+    to:
+    - 'on'
+  conditions: []
+  actions:
+  - action: switch.turn_on
+    metadata: {}
+    target:
+      entity_id: switch.dekoro_siena
+    data: {}
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.d16_2
+    data:
+      brightness_pct: 49
+  mode: single
+- id: '1765707612882'
+  alias: s-
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - light.d16_2
+    from:
+    - 'on'
+    to:
+    - 'off'
+  conditions: []
+  actions:
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.dekoro_siena
+  mode: single
+- id: '1765708258370'
+  alias: M - Foninis - ON
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - light.d16_14
+    from:
+    - 'off'
+    to:
+    - 'on'
+  conditions: []
+  actions:
+  - action: switch.turn_on
+    metadata: {}
+    target:
+      entity_id: switch.h32b_pro_16
+    data: {}
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id: light.d16_14
+    data:
+      brightness_pct: 30
+  mode: single
+- id: '1765708459945'
+  alias: M - Foninis - OFF
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - light.d16_14
+    from:
+    - 'on'
+    to:
+    - 'off'
+  conditions: []
+  actions:
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.h32b_pro_16
+  mode: single
+- id: '1765713128418'
+  alias: D - Foninis - ON
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - light.d16_13
+    from:
+    - 'off'
+    to:
+    - 'on'
+  conditions: []
+  actions:
+  - action: switch.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.h32b_pro_20
+  - action: light.turn_on
+    metadata: {}
+    target:
+      entity_id:
+      - light.d16_13
+    data:
+      brightness_pct: 30
+  mode: single
+- id: '1765713168504'
+  alias: D - Foninis - OFF
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - light.d16_13
+    from:
+    - 'on'
+    to:
+    - 'off'
+  conditions: []
+  actions:
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - switch.h32b_pro_20
+  mode: single

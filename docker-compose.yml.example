@@ -1,7 +1,10 @@
 services:
   homeassistant:
     image: ghcr.io/home-assistant/home-assistant:stable
+    network_mode: host
     container_name: homeassistant
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
     volumes:
       - "./config/ha:/config"
     ports:
@@ -18,17 +21,17 @@ services:
        - "9001:9001"
     restart: always
 
-#  player:
-#    build:
-#      context: ./builds/player/
-#    container_name: player
-#    env_file: "config/player/.env"
-#    devices:
-#      - "/dev/snd:/dev/snd"
-#    privileged: true
-#    volumes:
-#      - "./config/player/:/opt/"
-#    restart: always
+  player:
+    build:
+      context: ./builds/player/
+    container_name: player
+    env_file: "config/player/.env"
+    devices:
+      - "/dev/snd:/dev/snd"
+    privileged: true
+    volumes:
+      - "./config/player/:/opt/"
+    restart: always
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
